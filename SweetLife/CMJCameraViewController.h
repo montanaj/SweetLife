@@ -15,5 +15,4 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;
 
-
 @end

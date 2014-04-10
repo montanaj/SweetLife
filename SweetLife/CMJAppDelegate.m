@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "CMJViewController.h"
 #import "AllProfilesViewController.h"
+#import "CMJCameraViewController.h"
 
 @implementation CMJAppDelegate
 
@@ -30,7 +31,6 @@
             if ([viewController isKindOfClass:[AllProfilesViewController class]])
             {
                 allProfilesViewController = (id)viewController;
-
             }
         }
     }
