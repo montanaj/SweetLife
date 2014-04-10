@@ -7,6 +7,7 @@
 //
 
 #import "CMJCameraViewController.h"
+#import <Parse/Parse.h>
 
 @interface CMJCameraViewController ()
 
@@ -14,18 +15,13 @@
 
 @implementation CMJCameraViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Im here at the camera .. .. .");
+    
+    // Need to dismiss the toolbar thingy -> also small screen?
     
     // Does this device have a camera? If no hardware support is there message and exit - this is
     // for testing basically
@@ -37,7 +33,6 @@
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles: nil];
         [myAlertView show];
-        
     }
 }
 
@@ -74,6 +69,16 @@
     
     // Persist data to local device in the photo album - do I really need all these nil's .. .. .
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, nil, nil, nil);
+    
+    NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(chosenImage)];
+    
+    PFObject *object = [PFObject objectWithClassName:@"Photo"];
+    PFFile   *file   = [PFFile fileWithData:imageData];
+    
+    [object setObject:[PFUser currentUser] forKey:@"user"];
+    
+    [object setObject:file forKey:@"image"];
+    [object saveInBackground];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }

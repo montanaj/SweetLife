@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0F1EBC18F6E8AF003672FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F0F1EBB18F6E8AF003672FD /* Images.xcassets */; };
 		709F748A18F5E176000D1C49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709F748918F5E176000D1C49 /* Foundation.framework */; };
 		709F748C18F5E176000D1C49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709F748B18F5E176000D1C49 /* CoreGraphics.framework */; };
 		709F748E18F5E176000D1C49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709F748D18F5E176000D1C49 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F0F1EBB18F6E8AF003672FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		709F748618F5E176000D1C49 /* SweetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709F748918F5E176000D1C49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		709F748B18F5E176000D1C49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 		709F748F18F5E176000D1C49 /* SweetLife */ = {
 			isa = PBXGroup;
 			children = (
+				6F0F1EBB18F6E8AF003672FD /* Images.xcassets */,
 				709F751818F5F062000D1C49 /* Main.storyboard */,
 				709F74FF18F5ECD3000D1C49 /* AllProfilesViewController.h */,
 				709F750018F5ECD4000D1C49 /* AllProfilesViewController.m */,
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0F1EBC18F6E8AF003672FD /* Images.xcassets in Resources */,
 				709F749418F5E176000D1C49 /* InfoPlist.strings in Resources */,
 				709F751918F5F062000D1C49 /* Main.storyboard in Resources */,
 			);

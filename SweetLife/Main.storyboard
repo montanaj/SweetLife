@@ -48,26 +48,30 @@
             </objects>
             <point key="canvasLocation" x="2214" y="175"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Camera View Controller - Photo Picker-->
         <scene sceneID="U3c-0Q-Ju3">
             <objects>
-                <viewController id="DqR-uU-jyR" customClass="CMJCameraViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="DqR-uU-jyR" customClass="CMJCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eGn-J4-775"/>
                         <viewControllerLayoutGuide type="bottom" id="Dfe-6l-8tk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KMs-JY-Cak">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="KMs-JY-Cak">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-E4-PtG">
-                                <rect key="frame" x="0.0" y="43" width="320" height="351"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6F-WN-tnH">
-                                <rect key="frame" x="20" y="471" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6F-WN-tnH">
+                                <rect key="frame" x="20" y="458" width="96" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="LFJ-zm-UZs"/>
+                                    <constraint firstAttribute="height" constant="44" id="Vo7-sQ-KjN"/>
+                                </constraints>
                                 <state key="normal" title="Take Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,10 +79,14 @@
                                     <action selector="takePhoto:" destination="DqR-uU-jyR" eventType="touchUpInside" id="X72-VC-tdp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-T8-0Ok">
-                                <rect key="frame" x="204" y="471" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-T8-0Ok">
+                                <rect key="frame" x="204" y="458" width="96" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="AkI-ra-38b"/>
+                                    <constraint firstAttribute="height" constant="44" id="lqY-wt-3bz"/>
+                                </constraints>
                                 <state key="normal" title="Select Picture">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -88,8 +96,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dfe-6l-8tk" firstAttribute="top" secondItem="MVK-T8-0Ok" secondAttribute="bottom" constant="17" id="8ge-jb-icd"/>
+                            <constraint firstItem="Dfe-6l-8tk" firstAttribute="top" secondItem="u6F-WN-tnH" secondAttribute="bottom" constant="17" id="I3L-4z-6HL"/>
+                            <constraint firstAttribute="trailing" secondItem="MVK-T8-0Ok" secondAttribute="trailing" constant="20" id="MEr-yD-40Z"/>
+                            <constraint firstItem="u6F-WN-tnH" firstAttribute="leading" secondItem="KMs-JY-Cak" secondAttribute="leading" constant="20" id="p3q-Yo-oks"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2J9-pT-AcU"/>
+                    <navigationItem key="navigationItem" title="Photo Picker" id="2J9-pT-AcU"/>
                     <connections>
                         <outlet property="imageView" destination="Fxc-E4-PtG" id="W3u-ON-8xt"/>
                     </connections>
@@ -157,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1K-7L-b9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3381" y="143"/>
+            <point key="canvasLocation" x="2969" y="168"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="shu-AT-Z15">
@@ -197,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lk5-9X-FJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="-519"/>
+            <point key="canvasLocation" x="2993" y="-531"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="K6p-pU-u6G">
@@ -213,7 +227,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNb-LA-glA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-504"/>
+            <point key="canvasLocation" x="1841" y="-516"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ICs-Bm-pZI">
@@ -231,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzx-Gh-hA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-1183"/>
+            <point key="canvasLocation" x="2256" y="-1287"/>
         </scene>
         <!--User Activity View Controller-->
         <scene sceneID="c2t-kr-Cui">
@@ -268,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTP-kP-shJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-512"/>
+            <point key="canvasLocation" x="2213" y="-524"/>
         </scene>
         <!--Photo Table View Controller-->
         <scene sceneID="fBt-rk-trU">
@@ -303,7 +317,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzH-yR-8zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="-512"/>
+            <point key="canvasLocation" x="2595" y="-524"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zdc-VX-zAN">
@@ -421,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmu-bl-40k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="-512"/>
+            <point key="canvasLocation" x="429" y="175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XNC-Bb-b5E">
@@ -442,7 +456,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZD-av-kHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="175"/>
+            <point key="canvasLocation" x="1020" y="168"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
