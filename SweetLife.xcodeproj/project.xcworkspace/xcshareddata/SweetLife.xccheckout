@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B61C3579-5C17-4532-AD73-4944DA3D57CF</string>
+	<string>F7C94E0B-DCAE-49E0-B0E5-E501F68FB776</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SweetLife</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EB6956B3-A42B-434D-A682-5579DC76AAB2</key>
-		<string>https://github.com/montanaj/SweetLife.git</string>
+		<key>B3424546-8013-48CD-A93B-691EE6BE0D10</key>
+		<string>https://github.com/montanaj/SweetLife</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SweetLife.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EB6956B3-A42B-434D-A682-5579DC76AAB2</key>
+		<key>B3424546-8013-48CD-A93B-691EE6BE0D10</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/montanaj/SweetLife.git</string>
+	<string>https://github.com/montanaj/SweetLife</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EB6956B3-A42B-434D-A682-5579DC76AAB2</string>
+	<string>B3424546-8013-48CD-A93B-691EE6BE0D10</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EB6956B3-A42B-434D-A682-5579DC76AAB2</string>
+			<string>B3424546-8013-48CD-A93B-691EE6BE0D10</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SweetLife</string>
 		</dict>
