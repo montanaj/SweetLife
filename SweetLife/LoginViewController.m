@@ -41,12 +41,12 @@
     }
     
 }
-//
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (IBAction)onRegisterButtonPressed:(id)sender;
 {
@@ -57,6 +57,56 @@
     [self.reEnterPasswordField resignFirstResponder];
     [self checkFieldsComplete];
 }
+
+- (IBAction)onAlreadyUserButtonPressed:(id)sender
+{
+    [UIView animateWithDuration:0.3 animations:^{
+                       self.LogInOverlayView.frame = self.view.frame;
+                   }];
+
+}
+
+
+//- (IBAction)onAlreadyRegisteredPressed:(id)sender
+//{
+//    [UIView animateWithDuration:0.3 animations:^{
+//               self.LogInOverlayView.frame = self.view.frame;
+//           }];
+//}
+
+
+//- (IBAction)onAlreadyRegisteredPressed:(id)sender
+//{
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.LogInOverlayView.frame = self.view.frame;
+//    }];
+//}
+
+- (IBAction)onLogInButtonPressed:(id)sender
+{
+    [PFUser logInWithUsernameInBackground:self.logInUserTextField.text password:self.logInPasswordTextField.text block:^(PFUser *user, NSError *error) {
+        if (!error)
+        {
+            NSLog(@"Login User");
+            self.logInUserTextField.text = nil;
+            self.logInPasswordTextField.text = nil;
+            self.userNameField.text = nil;
+            self.emailAddressField.text = nil;
+            self.emailPasswordField.text = nil;
+            self.reEnterPasswordField.text = nil;
+            //is this where the problem is??
+            [self performSegueWithIdentifier:@"login" sender:self];
+        }
+        if (error)
+        {
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"ooops" message:@"sorry we had a problem logging you in" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+        }
+        
+    }];
+}
+
+
 //help method to make sure that the
 -(void)checkFieldsComplete
 {
@@ -94,10 +144,17 @@
     newUser.email = self.emailAddressField.text;
     newUser.password = self.emailPasswordField.text;
     
+    
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error)
         {
             NSLog(@"Registration Success");
+            self.logInUserTextField.text = nil;
+            self.logInPasswordTextField.text = nil;
+            self.userNameField.text = nil;
+            self.emailAddressField.text = nil;
+            self.emailPasswordField.text = nil;
+            self.reEnterPasswordField.text = nil;
             //since registration is successful it segues into the app
             [self performSegueWithIdentifier:@"login" sender:self];
         }

@@ -18,6 +18,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailPasswordField;
 
 @property (strong, nonatomic) IBOutlet UITextField *reEnterPasswordField;
+@property (strong, nonatomic) IBOutlet UIView *LogInOverlayView;
 
+@property (strong, nonatomic) IBOutlet UITextField *logInUserTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField *logInPasswordTextField;
 
 @end

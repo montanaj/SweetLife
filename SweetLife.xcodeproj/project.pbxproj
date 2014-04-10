@@ -29,6 +29,8 @@
 		709F751518F5EFCA000D1C49 /* UserActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 709F751118F5EFCA000D1C49 /* UserActivityViewController.m */; };
 		709F751918F5F062000D1C49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709F751818F5F062000D1C49 /* Main.storyboard */; };
 		B1BF6EF6B1A942349B3620CE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFE9FC278214F16B721F948 /* libPods.a */; };
+		D09925A218F6F7B500E8B057 /* LogOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09925A118F6F7B500E8B057 /* LogOutViewController.m */; };
+		D09925A518F7039D00E8B057 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09925A418F7039D00E8B057 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		709F751818F5F062000D1C49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7CFE9FC278214F16B721F948 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44E2032DCB4C3391F3AE12 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D09925A018F6F7B500E8B057 /* LogOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutViewController.h; sourceTree = "<group>"; };
+		D09925A118F6F7B500E8B057 /* LogOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutViewController.m; sourceTree = "<group>"; };
+		D09925A318F7039D00E8B057 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D09925A418F7039D00E8B057 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,10 @@
 			children = (
 				6F0F1EBB18F6E8AF003672FD /* Images.xcassets */,
 				709F751818F5F062000D1C49 /* Main.storyboard */,
+				D09925A318F7039D00E8B057 /* ProfileViewController.h */,
+				D09925A418F7039D00E8B057 /* ProfileViewController.m */,
+				D09925A018F6F7B500E8B057 /* LogOutViewController.h */,
+				D09925A118F6F7B500E8B057 /* LogOutViewController.m */,
 				709F74FF18F5ECD3000D1C49 /* AllProfilesViewController.h */,
 				709F750018F5ECD4000D1C49 /* AllProfilesViewController.m */,
 				709F750A18F5EFCA000D1C49 /* LoginViewController.h */,
@@ -329,12 +339,14 @@
 				709F751518F5EFCA000D1C49 /* UserActivityViewController.m in Sources */,
 				709F74A018F5E177000D1C49 /* CMJViewController.m in Sources */,
 				709F749618F5E176000D1C49 /* main.m in Sources */,
+				D09925A218F6F7B500E8B057 /* LogOutViewController.m in Sources */,
 				709F750118F5ECD4000D1C49 /* AllProfilesViewController.m in Sources */,
 				709F751418F5EFCA000D1C49 /* ProfileDetailViewController.m in Sources */,
 				709F749A18F5E176000D1C49 /* CMJAppDelegate.m in Sources */,
 				709F751218F5EFCA000D1C49 /* LoginViewController.m in Sources */,
 				709F750618F5EF9A000D1C49 /* CMJCameraViewController.m in Sources */,
 				709F751318F5EFCA000D1C49 /* PhotoTableViewController.m in Sources */,
+				D09925A518F7039D00E8B057 /* ProfileViewController.m in Sources */,
 				709F750918F5EFBF000D1C49 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
